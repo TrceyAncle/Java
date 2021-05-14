@@ -11,27 +11,17 @@ public class Main7
 		Scanner in=new Scanner(System.in);
 		int n=Integer.parseInt(in.nextLine());
 		ArrayList<Fruit> fruitList = new ArrayList<Fruit>();
-		int a=1;
-		Fruit f1 = new Fruit(in.next());
-		fruitList.add(f1);
-		for (int i = 0; i < n-1; i++) 
+		Fruit[] fruit = new Fruit[n];
+		for (int i = 0; i < n; i++) 
 		{
-			int b=0;
-			Fruit f2 = new Fruit(in.next());
-			for (int j = 0; j < a; j++) 
-			{
-				if(fruitList.contains(f2))
-				{
-					b=1;
-				}
-			}
-			if(b==0)
-			{
-				fruitList.add(f2);
-				a++;
-			}
+			fruit[i] = new Fruit(in.next());
 		}
-		for (int i = 0; i < a; i++) 
+		for (int i = 0; i < n; i++) 
+		{
+			if(!fruitList.contains(fruit[i]))
+				fruitList.add(fruit[i]);
+		}
+		for (int i = 0; i < fruitList.size(); i++) 
 		{
 			System.out.println(fruitList.get(i));
 		}

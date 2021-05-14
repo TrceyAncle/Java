@@ -1,9 +1,15 @@
 package week4;
 
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class Main 
 {
 	public static void main(String[] args) 
 	{
+		Scanner in=new Scanner(System.in);
+		//登陆
+		//搜索商品、加入或移除购物车
 	}
 }
 
@@ -50,6 +56,7 @@ class shoppingCart
 	private Goods goods;
 	private int number;
 	private double totalprice;
+	ArrayList<shoppingCart> shoppingcart = new ArrayList<shoppingCart>();
 	public void Add() 
 	{
 		//添加商品
