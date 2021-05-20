@@ -42,12 +42,12 @@ public class Main
 							System.out.print("如需购买请输入商品编号及购买数量：");
 							int aa = in.nextInt();
 							good[aa].setSum(in.nextInt());
-							user.shopping.Add(good[aa]);
+							user.shopping.goodsAdd(good[aa]);
 							break;
 						case "2":
 							System.out.print("如需删除请输入商品编号：");
 							int bb = in.nextInt();
-							user.shopping.Delete(good[bb]);
+							user.shopping.goodsDelete(good[bb]);
 							break;
 						case "3":
 							a=2;
@@ -59,8 +59,8 @@ public class Main
 						break;
 					
 				}
-				user.shopping.Showcart();
-				user.shopping.Total();
+				user.shopping.showCart();
+				user.shopping.showTotal();
 			}
 			else
 				b++;
@@ -74,7 +74,7 @@ class User
 {
 	private String username;
     private String password;
-    shoppingCart shopping;
+    ShoppingCart shopping;
     //其他信息
 	public String getUsername() 
 	{
@@ -97,7 +97,7 @@ class User
 		super();
 		this.username = username;
 		this.password = password;
-		this.shopping = new shoppingCart();
+		this.shopping = new ShoppingCart();
 	}
     
 }
@@ -150,24 +150,24 @@ class Goods
 	}
 }
 
-class shoppingCart
+class ShoppingCart
 {
 	ArrayList<Goods> shoppingcart = new ArrayList<Goods>();
-	public void Add(Goods goods) 
+	public void goodsAdd(Goods goods) 
 	{
 		if(!shoppingcart.contains(goods))
 			shoppingcart.add(goods);
 		else
 			System.out.println("商品已在购物车中!");
 	}
-	public void Delete(Goods goods)
+	public void goodsDelete(Goods goods)
 	{
 		if(shoppingcart.contains(goods))
 			shoppingcart.remove(goods);
 		else
 			System.out.println("未选购此商品!");
 	}
-	public void Total()
+	public void showTotal()
 	{
 		double a=0;
 		for (Goods e : shoppingcart) 
@@ -177,7 +177,7 @@ class shoppingCart
 		System.out.print("总价:");
 		System.out.printf("%.1f",a);
 	}
-	public void Showcart()
+	public void showCart()
 	{
 		if(shoppingcart.size()==0)
 			System.out.println("未添加商品！");
