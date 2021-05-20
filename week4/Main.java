@@ -8,8 +8,8 @@ public class Main
 	public static void main(String[] args) 
 	{
 		Scanner in=new Scanner(System.in);
-		//ç™»é™†
-		//æœç´¢å•†å“ã€åŠ å…¥æˆ–ç§»é™¤è´­ç‰©è½¦
+		//µÇÂ½
+		//ËÑË÷ÉÌÆ·¡¢¼ÓÈë»òÒÆ³ı¹ºÎï³µ
 	}
 }
 
@@ -18,7 +18,7 @@ class Login
 	private User user;
     public void Verify(String Username,String Password)
     {
-    	//éªŒè¯è¿‡ç¨‹
+    	//ÑéÖ¤¹ı³Ì
     }
 }
 
@@ -26,7 +26,7 @@ class User
 {
 	private String username;
     private String password;
-    //å¯†ä¿é—®é¢˜ç­‰ä¿¡æ¯
+    //ÃÜ±£ÎÊÌâµÈĞÅÏ¢
 }
 
 class Goods
@@ -34,10 +34,10 @@ class Goods
 	private String name;
 	private double price;
 	private String goodsumber;
-	private String pdicture;//å›¾ç‰‡ä¿å­˜è·¯å¾„ 
+	private String pdicture;//Í¼Æ¬±£´æÂ·¾¶ 
 	public void Addtocart()
 	{
-		//åŠ å…¥è´­ç‰©è½¦
+		//¼ÓÈë¹ºÎï³µ
 	}
 }
 
@@ -46,12 +46,12 @@ class Search
 	private String searchname;
 	public void Search(String searchname)
 	{
-		//æŸ¥æ‰¾å•†å“	
+		//²éÕÒÉÌÆ·	
 	}
 	
 }
 
-class shoppingCart extends Goods
+class shoppingCart
 {
 	private Goods goods;
 	private int number;
@@ -59,18 +59,18 @@ class shoppingCart extends Goods
 	ArrayList<shoppingCart> shoppingcart = new ArrayList<shoppingCart>();
 	public void Add() 
 	{
-		//æ·»åŠ å•†å“
+		//Ìí¼ÓÉÌÆ·
 	}
 	public void Delete()
 	{
-		//åˆ é™¤å•†å“
+		//É¾³ıÉÌÆ·
 	}
 	public void Total()
 	{
-		//è®¡ç®—æ€»ä»·
+		//¼ÆËã×Ü¼Û
 	}
 	public void payment()
 	{
-		//ä»˜æ¬¾
+		//¸¶¿î
 	}
 }
